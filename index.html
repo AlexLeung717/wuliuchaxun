@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物流快递查询</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <div class="con">
+        <h1>物流查询小工具</h1>
+        <p class="subHeading">双十一、双十二必备利器</p>
+
+        <div class="form">
+            <select name="kuaiditype" id="type">
+                <option value="shentong">申通</option>
+                <option value="ems">EMS</option>
+                <option value="shunfeng">顺丰</option>
+                <option value="yuantong">圆通</option>
+                <option value="zhongtong">中通</option>
+                <option value="yunda">韵达</option>
+                <option value="tiantian">天天</option>
+                <option value="huitongkuaidi">汇通</option>
+                <option value="quanfengkuaidi">全峰</option>
+                <option value="debangkuaidi">德邦</option>
+                <option value="zhaijisong">宅急送</option>
+            </select>
+            <input type="text" id="postid" placeholder="请输入快递单号">
+            <button id="submit">查询</button>
+        </div>
+
+        <div class="result">
+
+            <span>查询结果 : </span><span class="state">无</span>
+            
+            <div class="result-box">
+                <div class="loading"></div>
+                <ul class='list'>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

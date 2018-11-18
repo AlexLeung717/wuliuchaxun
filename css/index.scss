@@ -1,0 +1,156 @@
+
+
+@import '../css/base.scss';
+
+$imgPath: '../image';
+
+body{
+    min-width: 1000px;
+    background-color: #E6E5C8;
+    overflow-y: hidden;
+}
+
+.con{
+    width: 800px;
+    height: 600px;
+    margin: 80px auto;
+    overflow: hidden;
+    background-color: #F1EFE3;
+    box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.05);
+
+    h1{
+        font-size: 25px;
+        color: #46887A;
+        text-align: center;
+        margin: 40px 0 20px;
+    }
+
+    .subHeading{
+        font-size: 15px;
+        color: #76BE82;
+        text-align: center;
+    }
+
+}
+
+.form{
+    margin-top: 30px;
+    text-align: center;
+    padding: 1px;
+
+    #type{
+        width: 66px;
+        height: 26px;
+        line-height: 22px;
+        padding: 0px;
+        border: 1px solid #ccc;
+        
+        option{
+            background-color: #fff;
+        }
+
+        option:nth-child(2n){
+            background-color: #eee;
+        }
+    }
+
+    #postid{
+        width: 260px;
+        height: 26px;
+        line-height: 22px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 0px 0px 0px 15px;
+        margin-top: 0;
+       
+    }
+
+    #submit{
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: #76BE82;
+            color: #fff;
+            border-color: #76BE82;
+        }
+    }
+}
+
+.result{
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    span{
+        font-size: 18px;
+        color: orange;
+    }
+
+    span.state{
+        color: red;
+    }
+
+    &-box{
+        width: 740px;
+        height: 300px;
+        margin-top: 30px;
+        overflow-y: auto;
+
+        .loading{
+            display: none;
+            width: 100%;
+            height: 120px;
+            background: url(#{$imgPath}/loading.gif) no-repeat;
+            background-size:  110px 110px;
+            background-position: center center;
+        }
+
+        .list{
+            display: none;
+            padding: 0 0 10px 0;
+
+            li{
+                background-color: #fff;
+                padding: 10px;
+                font-size: 16px;
+                
+                span{
+                    font-size: 14px;  
+                }
+
+                p{
+                    margin-top: 8px;
+                    line-height: 1.4;
+                    color: #dd2a2ade;
+                }
+            }
+
+            li + li{
+                margin-top: 15px;
+            }
+        }
+
+        &::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+        }
+        &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 4px;
+            // -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            // background: rgba(0,0,0,0.2);
+            background-color: #E6E5C8;
+        }
+        &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            // -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            background: #fff;
+        }
+    }
+}
