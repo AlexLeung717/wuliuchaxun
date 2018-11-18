@@ -12,11 +12,7 @@ var loading = $('.loading');
 var page = {
 
     init: function(){
-        this.onLoad();
         this.bindEvt();
-    },
-    onLoad: function(){
-
     },
     bindEvt: function(){
         // 查询按钮
