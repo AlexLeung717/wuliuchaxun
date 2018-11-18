@@ -5,9 +5,10 @@ var params = {
     postid : ''
 }
 
-var state = $('.result .state');
-var uList = $('.result-box .list');
-var loading = $('.loading');
+var state   = $('.result .state'),
+    uList   = $('.result-box .list'),
+    loading = $('.loading'),
+    form    = $('.form');
 
 var page = {
 
@@ -16,17 +17,17 @@ var page = {
     },
     bindEvt: function(){
         // 查询按钮
-        $('.form').on('click', '#submit', function(){
+        form.on('click', '#submit', function(){
             model.loadData();            
         })
 
         // 订单号输入框，enter回车
-        $('#postid').keyup(function(e){
+        form.on('keyup', '#postid', function(e){
             if( e.keyCode == 13 ){
                 model.loadData();
             }
         })
-
+    
     }
 }
 
